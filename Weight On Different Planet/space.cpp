@@ -1,59 +1,49 @@
 #include <iostream>
+#include <string>
 
 int main() {
-  double ewgt;
-  std::cout << "Enter Your Weight On Earth: \n";
-  std::cin >> ewgt;
+    double ewgt;
 
-  int number;
-  std::cout << "Enter The Number For The Planet You Want To Fight On: \n";
-  std::cin >> number;
+    std::cout << "Enter Your Weight On Earth: ";
+    std::cin >> ewgt;
 
-  double gravity;
-  std::string planet;
+    std::string planet;
 
-  switch (number) {
+    std::cout << "Enter The Planet You Want To Fight On: ";
+    std::cin >> planet;
 
-    case 1:
-    planet = "Mercury";
-    gravity = 0.38;
-    break;
+    double gravity;
 
-    case 2:
-    planet = "Venus";
-    gravity = 0.91;
-    break;
+    if (planet == "Mercury") {
+        gravity = 0.38;
+    }
+    else if (planet == "Venus") {
+        gravity = 0.91;
+    }
+    else if (planet == "Mars") {
+        gravity = 0.38;
+    }
+    else if (planet == "Jupiter") {
+        gravity = 2.34;
+    }
+    else if (planet == "Saturn") {
+        gravity = 1.06;
+    }
+    else if (planet == "Uranus"){
+        gravity = 0.92;
+    }
+    else if (planet == "Neptune"){
+        gravity = 1.19;
+    }
+    else {
+        std::cout << "Invalid planet!";
+        return 0;
+    }
 
-    case 3:
-    planet = "Mars";
-    gravity = 0.38;
-    break;
+    double pweight = ewgt * gravity;
 
-    case 4:
-    planet = "Jupiter";
-    gravity =2.34;
-    break;
+    std::cout << "Your weight on " << planet
+              << " is " << pweight << " Kg";
 
-    case 5:
-    planet = "Saturn";
-    gravity = 1.06;
-    break;
-
-    case 6:
-    planet = "Uranus";
-    gravity = 0.92;
-    break;
-
-    case 7:
-    planet = "Neptune";
-    gravity = 1.19;
-    break;
-  }
-
-  double pweight;
-  pweight = ewgt * gravity;
-  std::cout << "Weight on the " << planet << "Is " << pweight << "Kg";
-
-  
-  
+    return 0;
 }

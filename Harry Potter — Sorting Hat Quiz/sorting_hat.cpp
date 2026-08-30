@@ -54,7 +54,7 @@ int main(){
     }
 
     int third_ques;
-    std::cout << ":Which kind of instrument most pleases your ear? \n";
+    std::cout << "Which kind of instrument most pleases your ear? \n";
     std::cout << "1. The Violin\n";
     std::cout << "2. The Trumpet\n";
     std::cout << "1. The Piano\n";
@@ -81,5 +81,32 @@ int main(){
         std::cout << "I Like Most Drum\n";
         Gryffindor == +1;
     }
-    
+    int fourth_ques;
+    std::cout << "Which road tempts you most? \n";
+    std::cout << "1. The wide, sunny, grassy lane\n";
+    std::cout << "2. The narrow, dark, lantern-lit alley\n";
+    std::cout << "1. The twisting, leaf-strewn path through woods\n";
+    std::cout << "2. The cobbled street lined with ancient buildings\n";
+
+    std::cout << "Enter Your Choice: ";
+    std::cin >> fourth_ques;
+    switch (fourth_ques)
+    {
+    case 1:
+        std::cout << "The wide, sunny, grassy lane\n";
+        Slytherin == +1;
+        break;
+    case 2:
+        std::cout << "The narrow, dark, lantern-lit alley\n";
+        Hufflepuff == +1;
+    default:
+        break;
+    case 3:
+        std::cout << "The twisting, leaf-strewn path through woods\n";
+        Ravenclaw == +1;
+        break;
+    case 4:
+        std::cout << "The cobbled street lined with ancient buildings\n";
+        Gryffindor == +1;
+    }
 }

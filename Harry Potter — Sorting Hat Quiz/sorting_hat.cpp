@@ -33,7 +33,7 @@ int main(){
 
     std::cout << "Enter Your Choice: ";
     std::cin >> two_ques;
-    switch (one_ques)
+    switch (two_ques)
     {
     case 1:
         std::cout << "The Good Person\n";
@@ -50,6 +50,35 @@ int main(){
         break;
     case 4:
         std::cout << "The Bold Person\n";
+        Gryffindor == +1;
+    }
+
+    int third_ques;
+    std::cout << ":Which kind of instrument most pleases your ear? \n";
+    std::cout << "1. The Violin\n";
+    std::cout << "2. The Trumpet\n";
+    std::cout << "1. The Piano\n";
+    std::cout << "2. The Drum\n";
+
+    std::cout << "Enter Your Choice: ";
+    std::cin >> third_ques;
+    switch (third_ques)
+    {
+    case 1:
+        std::cout << "I Like Most Violin\n";
+        Slytherin == +1;
+        break;
+    case 2:
+        std::cout << "I Like Most Trumpet\n";
+        Hufflepuff == +1;
+    default:
+        break;
+    case 3:
+        std::cout << "I Like Most Piano\n";
+        Ravenclaw == +1;
+        break;
+    case 4:
+        std::cout << "I Like Most Drum\n";
         Gryffindor == +1;
     }
     

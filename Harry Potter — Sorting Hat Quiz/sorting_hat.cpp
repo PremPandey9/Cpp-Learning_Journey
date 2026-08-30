@@ -72,11 +72,11 @@ int main(){
     {
     case 1:
         std::cout << "I Like Most Violin\n";
-        Slytherin += 1;
+        Hufflepuff += 1;
         break;
     case 2:
         std::cout << "I Like Most Trumpet\n";
-        Hufflepuff += 1;
+        Slytherin += 1;
         break;
     case 3:
         std::cout << "I Like Most Piano\n";
@@ -100,11 +100,11 @@ int main(){
     {
     case 1:
         std::cout << "The wide, sunny, grassy lane\n";
-        Slytherin += 1;
+        Hufflepuff += 1;
         break;
     case 2:
         std::cout << "The narrow, dark, lantern-lit alley\n";
-        Hufflepuff += 1;
+        Slytherin += 1;
         break;
     case 3:
         std::cout << "The twisting, leaf-strewn path through woods\n";
@@ -116,10 +116,10 @@ int main(){
         break;
     }
 
-    std::cout << Gryffindor;
-    std::cout << Ravenclaw;
-    std::cout << Hufflepuff;
-    std::cout << Slytherin;  
+    std::cout <<"\nGryffindor " << Gryffindor;
+    std::cout << "\nRavenclaw " << Ravenclaw;
+    std::cout << "\nHufflepuff " << Hufflepuff ;
+    std::cout << "\nSlytherin " << Slytherin;  
 
     if(Gryffindor > Ravenclaw && Gryffindor > Hufflepuff && Gryffindor > Slytherin){
         std::cout << "\nGryffindor wins";
@@ -130,7 +130,10 @@ int main(){
     else if (Hufflepuff > Gryffindor && Hufflepuff > Ravenclaw  && Hufflepuff >Slytherin){
         std::cout << "\nHufflepuff wins";
     }
-    else{
+    else if (Slytherin > Gryffindor && Slytherin > Ravenclaw  && Slytherin > Hufflepuff){
         std::cout << "\nSlytherin wins";
+    }
+    else{
+        std::cout << "\nTie";
     }
 }

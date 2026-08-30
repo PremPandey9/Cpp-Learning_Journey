@@ -6,10 +6,10 @@ int main(){
     int Hufflepuff;
     int Slytherin;
 
-    Gryffindor = 0
-    Ravenclaw = 0
-    Hufflepuff = 0
-    Slythe = 0
+    Gryffindor = 0;
+    Ravenclaw = 0;
+    Hufflepuff = 0;
+    Slytherin = 0;
 
     int one_ques;
     std::cout << "Do you like Dawn or Dusk?\n";
@@ -22,11 +22,11 @@ int main(){
     {
     case 1:
         std::cout << "You Select Dawn\n";
-        Gryffindor == 1;
+        Gryffindor += 1;
         break;
     case 2:
         std::cout << "You Select Dusk\n";
-        Slytherin == 1;
+        Slytherin += 1;
         break;
     }
 
@@ -114,5 +114,23 @@ int main(){
         std::cout << "The cobbled street lined with ancient buildings\n";
         Gryffindor += 1;
         break;
+    }
+
+    std::cout << Gryffindor;
+    std::cout << Ravenclaw;
+    std::cout << Hufflepuff;
+    std::cout << Slytherin;  
+
+    if(Gryffindor > Ravenclaw && Gryffindor > Hufflepuff && Gryffindor > Slytherin){
+        std::cout << "\nGryffindor wins";
+    }
+    else if (Ravenclaw > Gryffindor && Ravenclaw > Hufflepuff && Ravenclaw >Slytherin){
+        std::cout << "\nRavenclaw wins";
+    }
+    else if (Hufflepuff > Gryffindor && Hufflepuff > Ravenclaw  && Hufflepuff >Slytherin){
+        std::cout << "\nHufflepuff wins";
+    }
+    else{
+        std::cout << "\nSlytherin wins";
     }
 }

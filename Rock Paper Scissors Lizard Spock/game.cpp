@@ -2,12 +2,17 @@
 #include <random>
 
 int main(){
-
-    int Rock ;
-    int Paper ;
+    int Rock;
+    int Paper;
     int Scissors;
     int Lizard;
-    int Spock;
+    int Spock;    
+
+    Rock = 1;
+    Paper = 2;
+    Scissors = 3;
+    Lizard = 4;
+    Spock = 5;
 
     int move;
     std::cout << "Choose Your Move: \n";
@@ -50,7 +55,7 @@ int main(){
     {
         std::cout << "MATCH TIE";
     }
-    else if ((move == Rock && (cmove == Scissors || cmove == Lizard)) || (move == Scissors && (cmove == Paper || cmove == Lizard)) || (move == Lizard && (cmove == Paper || cmove == Spock)) || (move == Rock && (cmove == Rock || cmove == Scissors )))
+    else if ((move == Rock && (cmove == Scissors || cmove == Lizard)) || (move == Paper && (cmove == Rock || cmove == Spock) ) || (move == Scissors && (cmove == Paper || cmove == Lizard)) || (move == Lizard && (cmove == Paper || cmove == Spock)) || (move == Spock && (cmove == Rock || cmove == Scissors )))
     {
         std::cout << "YOU WIN ";
     }

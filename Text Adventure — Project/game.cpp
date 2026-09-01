@@ -32,6 +32,8 @@ int main(){
             int upstairs;
             std::cout << "1. Turn around\n";
             std::cout << "2. Try to open the bedroom\n";
+            std::cout << "Enter Your Choice: ";
+            std::cin >> upstairs;
             switch (upstairs)
             {
             case 1:
@@ -73,7 +75,11 @@ int main(){
                     {
                         int gold_key;
                         std::cout << "The chest opens.\n" << "Inside is a golden key.\n" << gold_key;
-                        gold_key = upstairs;
+                        if (condition)
+                        {
+                            /* code */
+                        }
+                        
                         break;
                     }
                     else{

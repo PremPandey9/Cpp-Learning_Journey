@@ -156,6 +156,15 @@ int main(){
                     std::cout << "2. Read the rest of the letter";
                     std::cin >> hidn;
 
+                    switch (hidn)
+                    {
+                    case 1:
+                        
+                        break;
+                    
+                    default:
+                        break;
+                    }
 
                 }
             }

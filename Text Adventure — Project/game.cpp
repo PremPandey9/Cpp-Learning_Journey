@@ -78,7 +78,12 @@ int main(){
             
             
             case 2:
-                std::cout << "You try the door."
+                std::cout << "You try the door." << "CLICK..." << "But it doesn't open." << "The bedroom is locked.";
+                std::cout << "You remember the golden key from the painting.";
+                std::cout << "Your Choices: ";
+                std::cout << "1. Search the mansion for the golden key\n";
+                std::cout << "2. Leave the hallway";
+                std::cout << "Enter Your Choice: ";
                 break;
             }
             break;
@@ -138,7 +143,7 @@ int main(){
                     std::cout << "========================================\n";
                 }
                 else{
-                    p
+                    
 
 
 

@@ -139,13 +139,22 @@ int main(){
                     std::cout << "\nThe chest suddenly locks permanently.\n";
                     std::cout << "You hear a terrifying sound behind you.\n";
                     std::cout << "\n========================================\n";
+                    std::cout << "Tusha Nii Ho Pyga Lowda....., Ja Ghar Ja.....";
                     std::cout << "              GAME OVER\n";
                     std::cout << "========================================\n";
                 }
                 else{
-                    
-
-
+                    std::cout << "\nYou remember the locked bedroom upstairs.\n";
+                    std::cout << "You return to the second floor with the golden key.\n\n";
+                    std::cout << "You stand in front of the locked bedroom.\n";
+                    std::cout << "You insert the golden key into the lock.\n" << "CLICK..." << "The door slowly opens.\n" << "Inside is an old dusty bedroom.\n" << "There is an old desk in the corner.\n" << "On the desk you find a mysterious letter.\n" << "The letter says:\n";
+                    std::cout << "\"If you have found this room, you have discovered the secret of Blackwood Mansion.\"\n\n";
+                    std::cout << "Then it says:\n" << "\"The treasure is hidden beneath the mansion.\"\n";
+                    int hidn;
+                    std::cout << "Your Choices:";
+                    std::cout << "1. Open the hidden door";
+                    std::cout << "2. Read the rest of the letter";
+                    std::cin >> hidn;
 
 
                 }

@@ -5,9 +5,9 @@ int main(){
     std::cout << "WELCOME TO MYSTERY ADVENTURE\n\n";
     std::cout << "The Secret of Blackwood Mansion\n\n";
     
-    std::cout << "Scene 1 — The Forest\n\n";
+    std::cout << "Scene 1 The Forest\n\n";
     std::cout << "You are walking home late at night when a heavy storm suddenly begins.\n" << "You lose your way and discover an old road leading deep into the forest.\n" << "After walking for several minutes, you see a huge abandoned mansion.\n";
-    std::cout << "A broken sign reads: \n" << "BLACKWOOD MANSION\n" << "Lightning strikes nearby.\n";
+    std::cout << "A broken sign reads: \n\n" << "BLACKWOOD MANSION\n\n" << "Lightning strikes nearby.\n";
     
     
     int forest;
@@ -21,8 +21,8 @@ int main(){
     switch (forest)
     {
     case 1:
-        std::cout << "You push the giant wooden door.\n" << "CREAAAAK...\n" << "The door opens by itself.\n" << "Inside, the mansion is completely dark.\n";
-        std::cout << "You hear a strange sound coming from upstairs.\n";
+        std::cout << "\nYou push the giant wooden door.\n" << "CREAAAAK...\n" << "The door opens by itself.\n" << "Inside, the mansion is completely dark.\n";
+        std::cout << "You hear a strange sound coming from upstairs.\n\n";
         
         
         int mansion;
@@ -35,7 +35,7 @@ int main(){
         switch (mansion)
         {
         case 1:
-            std::cout << "You climb the old staircase.\n" << "Every step makes a loud CREAK.\n" << "At the end of the hallway, you find a locked bedroom.\n" << "Beside the door is an old painting.\n" << "The painting shows a man holding a golden key.\n" << "Suddenly...\n";
+            std::cout << "\nYou climb the old staircase.\n" << "Every step makes a loud CREAK.\n" << "At the end of the hallway, you find a locked bedroom.\n" << "Beside the door is an old painting.\n" << "The painting shows a man holding a golden key.\n" << "Suddenly...\n";
             std::cout << "You hear footsteps behind you.\n";
             int upstairs;
             std::cout << "1. Turn around\n";
@@ -45,8 +45,8 @@ int main(){
             switch (upstairs)
             {
             case 1:
-                std::cout << "You slowly turn around.\n" << "There is nobody there.\n" << "The footsteps stop.\n" << "You look back at the bedroom.\n";
-                std::cout << "The door is still locked.\n";
+                std::cout << "\nYou slowly turn around.\n" << "There is nobody there.\n" << "The footsteps stop.\n" << "You look back at the bedroom.\n";
+                std::cout << "The door is still locked.\n\n";
                 
                 int turn;
                 std::cout << "1. Search the hallway\n";
@@ -158,7 +158,7 @@ int main(){
                                 {
                                 case 1:
                                 {
-                                    std::cout << "The moment you open the hidden door, a freezing wind blows through the room.\n";
+                                    std::cout << "\nThe moment you open the hidden door, a freezing wind blows through the room.\n";
                                     std::cout << "The lights go out.\n";
                                     std::cout << "Everything becomes silent.\n";
                                     std::cout << "Then...\n";
@@ -167,15 +167,15 @@ int main(){
                                     std::cout << "\"Why have you come here?\"\n";
 
                                     int speak;
-                                    std::cout << "Your Choices:\n";
                                     std::cout << "1. Tell the truth\n";
                                     std::cout << "2. Run away\n";
+                                    std::cout << "Your Choices:";
                                     std::cin >> speak;
                                     switch (speak)
                                     {
                                     case 1:
                                     {
-                                    std::cout << "You take a deep breath.\n";
+                                    std::cout << "\nYou take a deep breath.\n";
                                     std::cout << "You say:\n";
                                     std::cout << "\"I was lost in the forest. I only came here looking for shelter.\"\n";
                                     std::cout << "The shadow becomes silent.\n";
@@ -187,9 +187,9 @@ int main(){
                                     std::cout << "You realize you have discovered the entrance to the mansion's underground chamber.\n";
 
                                     int final;
-                                    std::cout << "\nYour Choices:\n";
-                                    std::cout << "1. Go downstairs\n";
+                                    std::cout << "\n1. Go downstairs\n";
                                     std::cout << "2. Leave the mansion\n";
+                                    std::cout << "Your Choices:\n";
                                     std::cin >> final;
 
                                     switch (final)
@@ -220,7 +220,7 @@ int main(){
                                         std::cout << "      CONGRATULATIONS, DETECTIVE!\n";
                                         std::cout << "           THE END\n";
                                         std::cout << "========================================\n";
-                                        break;
+                                        return 0;
 
                                     case 2:
                                         std::cout << "You leave the mansion.\n";
@@ -232,6 +232,10 @@ int main(){
                                         std::cout << "You leave the mansion.\n";
                                         std::cout << "ENDING - ESCAPE\n";
                                         break;
+                                    }
+                                    break;
+                                    }
+                                    }
                                     }
                                     break;
                                 case 2:
@@ -299,6 +303,7 @@ int main(){
                                             std::cout << "      CONGRATULATIONS, DETECTIVE!\n";
                                             std::cout << "           THE END\n";
                                             std::cout << "========================================\n";
+                                            return 0;
                                         }
                                         else
                                         {
@@ -336,6 +341,7 @@ int main(){
         
                         
                         }
+                        }
                         else
                         {
                             std::cout << "\nYou close the secret passage.\n";
@@ -347,7 +353,9 @@ int main(){
                     case 2:
                         std::cout << "\nYou leave the hallway.\n";
                         break;
+                    break;
                     }
+                break;
                 case 2:
                     std::cout << "You try the door.\n" << "CLICK...\n" << "But it doesn't open.\n" << "The bedroom is locked.\n" << "You remember the golden key from the painting.\n";
                     std::cout << "You decide: \n";
@@ -482,7 +490,7 @@ int main(){
                                             std::cout << "           THE END\n";
                                             std::cout << "========================================\n";
 
-                                            break;
+                                            return 0;
                                         case 2:
                                             std::cout << "You Leave The mansion\n";
                                             break;
@@ -629,7 +637,7 @@ int main(){
                                 std::cout << "The moment you open the hidden door, a freezing wind blows through the room.\n" << "The lights go out.\n" << "Everything becomes silent.\n" << "Then...\n" << "A dark shadow appears in front of you.\n" << "A mysterious voice asks:\n";
                                 std::cout << "\"Why have you come here?\"\n";
                                 int speak;
-                                std::cout << "Your Choices:";
+                                std::cout << "Your Choices:\n";
                                 std::cout << "1. Tell the truth\n";
                                 std::cout << "2. Run away\n";
                                 std::cin >> speak;
@@ -665,7 +673,7 @@ int main(){
                                         std::cout << "           THE END\n";
                                         std::cout << "========================================\n";
 
-                                        break;
+                                        return 0;
                                     case 2:
                                         std::cout << "You Leave The mansion\n";
                                         break;
@@ -823,7 +831,7 @@ int main(){
                             std::cout << "           THE END\n";
                             std::cout << "========================================\n";
 
-                            break;
+                            return 0;
                         case 2:
                             std::cout << "You Leave The mansion\n";
                             break;
@@ -852,7 +860,8 @@ int main(){
                 }
             
             }
-               
+                break;
+            }     
         case 2:
             std::cout << "You close the secret passage.\n";
             std::cout << "You decide the mansion is too dangerous.\n";
@@ -861,8 +870,8 @@ int main(){
             break;
         }
         break;
-    
-
+        }
+        break;
     case 2:
         std::cout << "You continue walking through the forest.\n" << "Suddenly, you notice a small abandoned cabin between the trees.\n";
         std::cout << "There is a light coming from inside.\n";

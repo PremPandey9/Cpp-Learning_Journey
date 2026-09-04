@@ -63,46 +63,152 @@ int main(){
                     std::cout << "\"What you seek lies beneath the house.\"\n";
                     std::cout << "\nCLUE FOUND!\n";
                     std::cout << "The clue suggests that something important is hidden underground.\n";
+                    std::cout << "You now realize that the mansion is hiding something beneath it.\n\n";
                     
                     int hallyway;
+                    std::cout << "1. Search the mansion for the golden key\n";
+                    std::cout << "2. Leave the hallway\n";
+                    std::cout << "Enter Your Choice: ";
+                    std::cin >> hallyway;
 
+                    switch (hallyway)
+                    {
+                    case 1:
+                        std::cout << "\nYou decide to search the mansion for the golden key.\n";
+                        std::cout << "You remember the strange living room and its bookshelf.\n";
+                        std::cout << "You go downstairs to investigate.\n";
+                        std::cout << "\nYou enter the living room.\n";
+                        std::cout << "There is an old fireplace and a large bookshelf.\n";
+                        std::cout << "While searching the room, you discover a hidden button behind a book.\n";
+                        std::cout << "You press it.\n";
+                        std::cout << "CLICK!\n";
+                        std::cout << "A secret passage opens behind the bookshelf.\n";
 
+                        int living_room;
+                        std::cout << "\n1. Enter the secret passage\n";
+                        std::cout << "2. Close the passage and leave\n";
+                        std::cout << "Enter Your Choice: ";
+                        std::cin >> living_room;
 
+                        if (living_room == 1)
+                        {
+                            std::cout << "\nYou enter the secret passage.\n";
+                            std::cout << "It is extremely dark.\n";
+                            std::cout << "You find a torch on the wall and light it.\n";
+                            std::cout << "The passage leads to an underground room.\n";
+                            std::cout << "In the middle of the room is a large wooden chest.\n";
+                            std::cout << "But the chest is locked.\n";
+                            std::cout << "\nSUN   MOON   STAR\n";
+                            std::cout << "Below them is a small note:\n";
+                            std::cout << "The sun rises before the moon, and the stars appear last.\n";
 
+                            int order;
+                            bool haskey = false;
 
+                            std::cout << "\nYou need to figure out the correct order.\n";
+                            std::cout << "1. SUN MOON STAR\n";
+                            std::cout << "2. STAR MOON SUN\n";
+                            std::cout << "3. MOON STAR SUN\n";
 
+                            for (int attempt = 1; attempt <= 3; attempt++)
+                            {
+                                std::cout << "\nAttempt " << attempt << " Of 3\n";
+                                std::cout << "Choose The Correct Figure: ";
+                                std::cin >> order;
 
+                                if (order == 1)
+                                {
+                                    std::cout << "The symbols glow.\n";
+                                    std::cout << "The chest opens.\n";
+                                    std::cout << "Inside is a golden key.\n";
 
+                                    haskey = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    std::cout << "Incorrect! The symbols remain dark.\n";
+                                }
+                            }
 
-
-
-
-
-
-
-
-
-
-
-
+                            if (!haskey)
+                            {
+                                std::cout << "\nThe chest suddenly locks permanently.\n";
+                                std::cout << "You hear a terrifying sound behind you.\n";
+                                std::cout << "\n========================================\n";
+                                std::cout << "              GAME OVER\n";
+                                std::cout << "========================================\n";
+                            }
+                            else
+                            {
+                                std::cout << "\nYou found the golden key!\n";
+                                std::cout << "You remember the locked bedroom upstairs.\n";
+                            }
+                        }
+                        else if (living_room == 2)
+                        {
+                            std::cout << "\nYou close the secret passage.\n";
+                            std::cout << "You decide the mansion is too dangerous.\n";
+                            std::cout << "You leave the mansion.\n";
+                            std::cout << "ENDING - ESCAPE\n";
+                        break;
+                    case 2:
+                        std::cout << "\nYou leave the hallway.\n";
+                        break;
+                    default:
+                        break;
+                    }
 
                     break;
                 case 2:
                     std::cout << "You try the door.\n" << "CLICK...\n" << "But it doesn't open.\n" << "The bedroom is locked.\n" << "You remember the golden key from the painting.\n";
                     std::cout << "You decide: \n";
-                    int key:
+                    int key;
                     std::cout << "1. Search the mansion for the golden key\n";
-                    std::cout << "2. Leave the hallway";
+                    std::cout << "2. Leave the hallway\n";
                     std::cout << "Enter Your Choice: ";
+                    std::cin >> key;
 
+                    if (key == 1)
+                    {
+                        std::cout << "\nYou decide to search the mansion for the golden key.\n";
+                        std::cout << "You remember the strange living room and its bookshelf.\n";
+                        std::cout << "You go downstairs to investigate.\n";
 
+                        std::cout << "\nYou enter the living room.\n";
+                        std::cout << "There is an old fireplace and a large bookshelf.\n";
+                        std::cout << "While searching the room, you discover a hidden button behind a book.\n";
+                        std::cout << "You press it.\n";
+                        std::cout << "CLICK!\n";
+                        std::cout << "A secret passage opens behind the bookshelf.\n";
 
+                        int living_room;
+                        std::cout << "\n1. Enter the secret passage\n";
+                        std::cout << "2. Close the passage and leave\n";
+                        std::cout << "Enter Your Choice: ";
+                        std::cin >> living_room;
 
-
-
-
-
-
+                        if (living_room == 1)
+                        {
+                            std::cout << "\nYou enter the secret passage.\n";
+                            std::cout << "It is extremely dark.\n";
+                            std::cout << "You find a torch on the wall and light it.\n";
+                            std::cout << "The passage leads to an underground room.\n";
+                            std::cout << "In the middle of the room is a large wooden chest.\n";
+                            std::cout << "But the chest is locked.\n";
+                        }
+                        else if (living_room == 2)
+                        {
+                            std::cout << "\nYou close the secret passage.\n";
+                            std::cout << "You decide the mansion is too dangerous.\n";
+                            std::cout << "You leave the mansion.\n";
+                            std::cout << "ENDING - ESCAPE\n";
+                        }
+                    }
+                    else if (key == 2)
+                    {
+                    std::cout << "\nYou leave the hallway.\n";
+                    }
 
                     break;
                     
@@ -113,28 +219,58 @@ int main(){
             
             
             case 2:
-                std::cout << "You try the door." << "CLICK..." << "But it doesn't open." << "The bedroom is locked.";
-                std::cout << "You remember the golden key from the painting.";
-                int hallway;
-                std::cout << "Your Choices: ";
+                std::cout << "You try the door." << "CLICK..." << "But it doesn't open." << "The bedroom is locked.\n";
+                std::cout << "You remember the golden key from the painting.\n";
+
+                int bedroom;
+                std::cout << "Your Choices: \n";
                 std::cout << "1. Search the mansion for the golden key\n";
-                std::cout << "2. Leave the hallway";
+                std::cout << "2. Leave the hallway\n";
                 std::cout << "Enter Your Choice: ";
+                std::cin >> bedroom;
 
+                else if (bedroom == 1)
+                {
+                    std::cout << "\nYou decide to search the mansion for the golden key.\n";
+                    std::cout << "You remember the strange living room and its bookshelf.\n";
+                    std::cout << "You go downstairs to investigate.\n";
 
+                    std::cout << "\nYou enter the living room.\n";
+                    std::cout << "There is an old fireplace and a large bookshelf.\n";
+                    std::cout << "While searching the room, you discover a hidden button behind a book.\n";
+                    std::cout << "You press it.\n";
+                    std::cout << "CLICK!\n";
+                    std::cout << "A secret passage opens behind the bookshelf.\n";
 
+                    int living_room;
+                    std::cout << "\n1. Enter the secret passage\n";
+                    std::cout << "2. Close the passage and leave\n";
+                    std::cout << "Enter Your Choice: ";
+                    std::cin >> living_room;
 
-
-
-
-
-
-
-
-
-
-
-
+                    if (living_room == 1)
+                    {
+                        std::cout << "\nYou enter the secret passage.\n";
+                        std::cout << "It is extremely dark.\n";
+                        std::cout << "You find a torch on the wall and light it.\n";
+                        std::cout << "The passage leads to an underground room.\n";
+                        std::cout << "In the middle of the room is a large wooden chest.\n";
+                        std::cout << "But the chest is locked.\n";
+                    }
+                    else if (living_room == 2)
+                    {
+                        std::cout << "\nYou close the secret passage.\n";
+                        std::cout << "You decide the mansion is too dangerous.\n";
+                        std::cout << "You leave the mansion.\n";
+                        std::cout << "ENDING - ESCAPE\n";
+                    }
+                }
+                else if (bedroom == 2)
+                {
+                
+                std::cout << "\nYou leave the hallway.\n";
+                
+                }
                 break;
             }
             break;
@@ -149,15 +285,15 @@ int main(){
             std::cout << "2.  Close the passage and leave\n";
             std::cout << "Enter Your Choice: ";
             std::cin >> living_room;
+
             switch (living_room)
             {
             case 1:
+            {
                 std::cout << "You enter the secret passage.\n" << "It is extremely dark.\n" << "You find a torch on the wall and light it.\n" << "The passage leads to an underground room.\n" << "In the middle of the room is a large wooden chest.\n" << "But the chest is locked.\n";
                 std::cout << "But the chest is locked.\n";
                 std::cout << "SUN   MOON   STAR\n";
                 std::cout << "Below them is a small note: \n" << "The sun rises before the moon, and the stars appear last.\n";
-                
-                
                 int order;
                 bool haskey = false;
 
@@ -169,7 +305,7 @@ int main(){
                 for (int attempt = 1; attempt <= 3; attempt++)
                 {
                     std::cout << "\nAttemps" << attempt << "Of 3\n";
-                    std::cout << "Choose The Correct Figure: ";
+                    std::cout << "Choose The Correct Figure: \n";
                     std::cin >> order;
 
                     if (order == 1)
@@ -181,7 +317,7 @@ int main(){
                             break;
                     }
                     else{
-                        std::cout << "Incorrect!, The symbols remain dark.";
+                        std::cout << "Incorrect!, The symbols remain dark.\n";
                     }
                     
                 }
@@ -202,8 +338,8 @@ int main(){
                     std::cout << "\"If you have found this room, you have discovered the secret of Blackwood Mansion.\"\n\n";
                     std::cout << "Then it says:\n" << "\"The treasure is hidden beneath the mansion.\"\n";
                     int hidn;
-                    std::cout << "1. Open the hidden door";
-                    std::cout << "2. Read the rest of the letter";
+                    std::cout << "1. Open the hidden door\n";
+                    std::cout << "2. Read the rest of the letter\n";
                     std::cout << "Your Choices:";
                     std::cin >> hidn;
 
@@ -213,7 +349,7 @@ int main(){
                         std::cout << "The moment you open the hidden door, a freezing wind blows through the room.\n" << "The lights go out.\n" << "Everything becomes silent.\n" << "Then...\n" << "A dark shadow appears in front of you.\n" << "A mysterious voice asks:\n";
                         std::cout << "\"Why have you come here?\"\n";
                         int speak;
-                        std::cout << "Your Choices:\n";
+                        std::cout << "Your Choices:";
                         std::cout << "1. Tell the truth\n";
                         std::cout << "2. Run away\n";
                         std::cin >> speak;
@@ -224,9 +360,9 @@ int main(){
                             std::cout << "You take a deep breath.\n" << "You say:\n" << "\"I was lost in the forest. I only came here looking for shelter.\"\n" << "The shadow becomes silent.\n" << "Then it says:\n" << "\"You are not here for greed.\"\n" << "The shadow slowly disappears.\n";
                             std::cout << "A hidden staircase appears beneath the floor.\n" << "You realize you have discovered the entrance to the mansion's underground chamber.\n";
                             int final;
-                            std::cout << "Your Choices:\n";
-                            std::cout << "1. Go downstairs";
-                            std::cout << "2. Leave the mansion";
+                            std::cout << "Your Choices:";
+                            std::cout << "1. Go downstairs\n";
+                            std::cout << "2. Leave the mansion\n";
                             std::cin >> final;
 
                             switch (final)
@@ -276,25 +412,14 @@ int main(){
                     default:
                         break;
                     }
+            
                 }
-            
-            
+            }    
             case 2:
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                std::cout << "You close the secret passage.\n";
+                std::cout << "You decide the mansion is too dangerous.\n";
+                std::cout << "You leave the mansion.\n";
+                std::cout << "ENDING - ESCAPE\n";
                 break;
             }
             break;
@@ -309,7 +434,7 @@ int main(){
         
         int walk_forest;
         std::cout << "1. Enter the cabin\n";
-        std::cout << "2. Ignore it and continue walking";
+        std::cout << "2. Ignore it and continue walking\n";
         std::cout << "Enter Your Choice: ";
         std::cin >> walk_forest;
         switch (walk_forest)
@@ -323,8 +448,8 @@ int main(){
             
             
             int cabin;
-            std::cout << "1. Look outside";
-            std::cout << "2. Hide inside the cabin";
+            std::cout << "1. Look outside\n";
+            std::cout << "2. Hide inside the cabin\n";
             std::cin >> cabin;
 
             switch (cabin)
@@ -332,7 +457,7 @@ int main(){
             case 1:
                 std::cout << "You slowly open the cabin door.\n" << "There is nobody there.\n" << "But you notice something strange.\n" << "There are footprints in the mud.\n" << "The footprints lead toward the mansion.\n";
                 int pathh;
-                std::cout << "Your Choice:\n";
+                std::cout << "Your Choice:";
                 std::cout << "1. Follow the footprints\n";
                 std::cout << "2. Stay in the cabin\n";
                 std::cin >> pathh;
@@ -340,27 +465,30 @@ int main(){
                 switch (pathh)
                 {
                 case 1:
-                    std::cout << "You follow the footprints through the forest.\n" << "After several minutes, you arrive at Blackwood Mansion.\n" << "You realize the diary was telling the truth.\n" << "The mystery begins again.\n" << "This path ends here in your current code.\n";
+                    std::cout << "You follow the footprints through the forest.\n" << "After several minutes, you arrive at Blackwood Mansion.\n" << "You realize the diary was telling the truth.\n" << "The mystery begins again.\n";
+                    int mansion_again;
+                    std::cout << "\n1. Enter the mansion\n";
+                    std::cout << "2. Search around the mansion\n";
+                    std::cout << "Enter Your Choice: ";
+                    std::cin >> mansion_again;
+
+                    if (mansion_again == 1)
+                    {
                     
+                    std::cout << "\nYou enter through a broken side door.\n";
+                    std::cout << "The mystery continues.\n";
+                    }
                     
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+                    else if (mansion_again == 2)
+                    {
+                    std::cout << "\nYou walk around the mansion.\n";
+                    std::cout << "Behind the building, you discover strange footprints leading toward the basement.\n";
+                    std::cout << "But the storm becomes stronger.\n";
+                    std::cout << "You decide to return home.\n";
+                    std::cout << "\nENDING - THE LOST DETECTIVE\n";
+                    std::cout << "You survive the night, but the secret of Blackwood Mansion remains hidden.\n";
+                
+                    }
                     break;
                 case 2:
                     std::cout << "You decide to stay inside.\n" << "The storm continues throughout the night.\n" << "You never discover the secret of Blackwood Mansion.\n";
@@ -392,7 +520,30 @@ int main(){
             switch (path)
             {
             case 1:
-                std::cout << "You enter through a broken side door.\n" << "The mystery continues.\n" << "This path ends here in your current code.\n";
+                std::cout << "\nYou enter through a broken side door.\n";
+                std::cout << "The mansion is dark and silent.\n";
+                std::cout << "You hear a strange sound coming from upstairs.\n";
+
+                int mansion_again;
+                std::cout << "\n1. Go Upstairs\n";
+                std::cout << "2. Explore the Living Room\n";
+                std::cout << "Enter Your Choice: ";
+                std::cin >> mansion_again;
+
+                if (mansion_again == 1)
+                {
+                std::cout << "\nYou climb the old staircase.\n";
+                std::cout << "Every step makes a loud CREAK.\n";
+                std::cout << "At the end of the hallway, you find a locked bedroom.\n";
+                }
+                else if (mansion_again == 2)
+                {
+                std::cout << "\nYou enter the living room.\n";
+                std::cout << "There is an old fireplace and a large bookshelf.\n";
+                std::cout << "You notice a hidden button behind a book.\n";
+                std::cout << "CLICK!\n";
+                std::cout << "A secret passage opens behind the bookshelf.\n";
+                }
                 break;
             case 2:
                 std::cout << "You walk around the mansion.\n" << "Behind the building, you discover strange footprints leading toward the basement.\n" << "But the storm becomes stronger.\n";
